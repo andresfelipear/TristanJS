@@ -144,3 +144,19 @@ footer p {
   color: var(--grey);
   align-self: center;
 }
+
+@media screen and (min-width: 600px) {
+  image {
+    margin: auto;
+    width: 90%;   
+  }
+  body {
+    font-size: 14px; 
+  }
+  nav ul {
+    display: flex 14px; 
+    flex-direction: row;
+
+  }
+}
+  
