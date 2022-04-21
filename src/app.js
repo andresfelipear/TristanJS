@@ -80,5 +80,9 @@ function displayContact(evt) {
   contDiv.appendChild(contInfo)
 }
 
-//allContacts.addEventListener('click', displayContact)
+function removeReadNote() {
+  while (allContacts.firstChild) {
+    readArea.removeChild(allContacts.firstChild);
+  }
+}
 
