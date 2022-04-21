@@ -62,10 +62,7 @@ function createContacts() {
   for (const contact of contactsList) {
     newDiv = document.createElement('div')
     contPara = document.createElement('p')
-    conName = contact.name
-    conPhone = contact.phone
-    conEmail = contact.email
-    contPara.innerHTML = conName
+    contPara.innerHTML = contact.name
     allContacts.appendChild(newDiv)
     newDiv.appendChild(contPara)
     newDiv.addEventListener('click', displayContact)
