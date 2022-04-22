@@ -63,8 +63,10 @@ function createContacts() {
     newDiv = document.createElement('div')
     contPara = document.createElement('p')
     contPara.innerHTML = contact.name
+    const pimage = `<img src="img/${contact.name}.png">`
     allContacts.appendChild(newDiv)
     newDiv.appendChild(contPara)
+    newDiv.insertAdjacentHTML('beforeend', pimage)
     newDiv.addEventListener('click', displayContact)
   }
 }
