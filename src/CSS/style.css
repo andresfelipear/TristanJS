@@ -23,10 +23,9 @@ img {
 }
 
 /* styles */
-
 .container {
   display: flex;
-  flex-direction: column;
+
 
   font-family: 'Inter', sans-serif;
   background-color: var(--white);
@@ -57,6 +56,8 @@ header li {
 
 header a {
   text-decoration: none;
+
+
   font-size: 2rem;
 }
 
@@ -65,8 +66,7 @@ header a:hover {
 }
 
 main {
-  display: flex;
-  justify-content: flex-start;
+
 }
 
 #individual_contact {
@@ -100,13 +100,10 @@ main {
 }
 
 #display_all_contacts {
-  margin: 0 auto;
-  width: 980px;
   display: flex;
   flex-grow: 0;
   gap: 20px;
   padding: 20px;
-  flex-wrap: wrap;
 }
 
 #display_all_contacts div {
@@ -131,11 +128,9 @@ main {
 }
 
 footer {
-  position:absolute;
   height: 5rem;
   display: flex;
   justify-content: center;
-  bottom: 0;
 }
 
 footer p {
@@ -143,20 +138,5 @@ footer p {
   font-size: 1.6rem;
   color: var(--grey);
   align-self: center;
-}
-
-@media screen and (min-width: 600px) {
-  image {
-    margin: auto;
-    width: 90%;   
-  }
-  body {
-    font-size: 14px; 
-  }
-  nav ul {
-    display: flex 14px; 
-    flex-direction: row;
-
-  }
 }
   

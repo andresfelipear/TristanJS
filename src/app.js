@@ -53,38 +53,5 @@ const contactsList = [
 
 // Your code goes here
 
-const allContacts = document.getElementById("display_all_contacts")
-const singleCard = document.getElementById("display_single_contact")
 
-//load contacts
-
-function createContacts() {
-  for (const contact of contactsList) {
-    newDiv = document.createElement('div')
-    contPara = document.createElement('p')
-    contPara.innerHTML = contact.name
-    const pimage = `<img src="img/${contact.name}.png">`
-    allContacts.appendChild(newDiv)
-    newDiv.appendChild(contPara)
-    newDiv.insertAdjacentHTML('beforeend', pimage)
-    newDiv.addEventListener('click', displayContact)
-  }
-}
-createContacts()
-  
-//display single contact
-
-function displayContact(evt) {
-  contDiv = document.createElement('div')
-  contInfo = document.createElement('p')
-  contInfo.innerHTML = evt.target.innerHTML
-  singleCard.appendChild(contDiv)
-  contDiv.appendChild(contInfo)
-}
-
-function removeReadNote() {
-  while (allContacts.firstChild) {
-    readArea.removeChild(allContacts.firstChild);
-  }
-}
 
