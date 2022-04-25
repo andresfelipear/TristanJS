@@ -52,9 +52,11 @@ const contactsList = [
 ]
 
 // Your code goes here
+
 function loadOneContact(contact) {
   const allContacts = document.getElementById('display_all_contacts')
   const contentContact = document.createElement('div');
+  contentContact.setAttribute('id', contact.ID)
   contentContact.innerHTML = `<img src="img/${contact.image}" />
   <span>${contact.name}</span>`
   allContacts.insertAdjacentElement('beforeend', contentContact)
@@ -67,5 +69,12 @@ function loadAllContacts(contacts) {
 }
 
 loadAllContacts(contactsList)
+
+const allContacts = document.getElementById('display_all_contacts')
+allContacts.addEventListener('click', (event) => {
+  let target = event.target.closest('div')
+  console.log(target.id)
+})
+
 
 
