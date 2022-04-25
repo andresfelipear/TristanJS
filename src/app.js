@@ -53,11 +53,14 @@ const contactsList = [
 
 // Your code goes here
 
+//function for clean the content of the div display_single_contact
 function closeSingleContact(){
   const singleContact = document.getElementById('display_single_contact')
   singleContact.innerHTML = '';
 }
 
+
+//function for get the attribute of the contact clicked and add those to the div display_single_contact
 function displayOneContact(id) {
   const singleContact = document.getElementById('display_single_contact')
   singleContact.innerHTML = '';
@@ -83,6 +86,7 @@ function displayOneContact(id) {
 }
 
 
+//function for create a div tag inside the display_all_contacts with img and name
 function loadOneContact(contact) {
   const allContacts = document.getElementById('display_all_contacts')
   const contentContact = document.createElement('div');
@@ -92,6 +96,7 @@ function loadOneContact(contact) {
   allContacts.insertAdjacentElement('beforeend', contentContact)
 }
 
+//function for create all the contacts
 function loadAllContacts(contacts) {
   contacts.forEach(contact => {
     loadOneContact(contact)
@@ -100,6 +105,7 @@ function loadAllContacts(contacts) {
 
 loadAllContacts(contactsList)
 
+//event listener for create and open details single contact
 const allContacts = document.getElementById('display_all_contacts')
 allContacts.addEventListener('click', (event) => {
   let target = event.target.closest('div')
