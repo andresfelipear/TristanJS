@@ -52,14 +52,20 @@ const contactsList = [
 ]
 
 // Your code goes here
-function loadOneContact(contact){
+function loadOneContact(contact) {
   const allContacts = document.getElementById('display_all_contacts')
   const contentContact = document.createElement('div');
   contentContact.innerHTML = `<img src="img/${contact.image}" />
   <span>${contact.name}</span>`
-  allContacts.insertAdjacentElement('beforeend',contentContact)
+  allContacts.insertAdjacentElement('beforeend', contentContact)
 }
 
-loadOneContact(contactsList[0]);
+function loadAllContacts(contacts) {
+  contacts.forEach(contact => {
+    loadOneContact(contact)
+  });
+}
+
+loadAllContacts(contactsList)
 
 
