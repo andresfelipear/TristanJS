@@ -53,6 +53,11 @@ const contactsList = [
 
 // Your code goes here
 
+function closeSingleContact(){
+  const singleContact = document.getElementById('display_single_contact')
+  singleContact.innerHTML = '';
+}
+
 function displayOneContact(id) {
   const singleContact = document.getElementById('display_single_contact')
   singleContact.innerHTML = '';
@@ -66,10 +71,15 @@ function displayOneContact(id) {
         <p>${contact.phone}</p>
         <p>${contact.email}</p>
     </div>
-    <span class="fa-solid fa-circle-xmark"></span>
+    <div id="closeButton">
+      <span class="fa-solid fa-circle-xmark"></span>
+    </div>
     
   `
   singleContact.insertAdjacentElement('beforeend', contentContact)
+  const closeButton = document.getElementById('closeButton')
+  closeButton.addEventListener('click', closeSingleContact)
+
 }
 
 
