@@ -66,6 +66,8 @@ function displayOneContact(id) {
         <p>${contact.phone}</p>
         <p>${contact.email}</p>
     </div>
+    <span class="fa-solid fa-circle-xmark"></span>
+    
   `
   singleContact.insertAdjacentElement('beforeend', contentContact)
 }
